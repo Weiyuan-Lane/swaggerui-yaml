@@ -1,0 +1,32 @@
+openapi: "3.0.0"
+
+info:
+  description: "Template description"
+  version: "0.0.1"
+  title: "Template Title"
+
+servers:
+  - url: https://api.github.com
+    description: GitHub's API
+
+tags:
+  - name: "Root resource"
+
+paths:
+  /:
+    get:
+      tags: 
+        - "Root resource"
+      responses:
+        200:
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/payload'
+
+components:
+  schemas:
+    payload:
+      type: object
+            
+
