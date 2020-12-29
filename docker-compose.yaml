@@ -2,10 +2,11 @@ version: '3.8'
 
 services:
   api-docs:
-    image: swaggerapi/swagger-ui:v3.38.0
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     volumes:
-      - ./:/apidocs/
+      - ./assets/:/assets/
+      - ./docs/:/docs/
     ports:
       - "8080:8080"
-    environment:
-      - SWAGGER_JSON=/apidocs/swagger-config.yaml

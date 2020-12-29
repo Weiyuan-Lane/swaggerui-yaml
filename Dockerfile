@@ -1,8 +1,8 @@
 FROM swaggerapi/swagger-ui:v3.38.0
 
-ARG SWAGGER_YAML=swagger-config.yaml
-ARG DEST_DIR=/
+ADD ./assets /assets
+ADD ./docs /usr/share/nginx/html/docs
 
-ENV SWAGGER_JSON=$DEST_DIR$SWAGGER_YAML
+COPY run.sh /
 
-COPY $SWAGGER_YAML $DEST_DIR
+ENTRYPOINT [ "/run.sh" ]

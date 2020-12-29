@@ -3,20 +3,20 @@ openapi: "3.0.0"
 info:
   description: "Template description"
   version: "0.0.1"
-  title: "Template Title"
+  title: "Google Map API"
 
 servers:
-  - url: https://api.github.com
-    description: GitHub's API
+  - url: https://maps.googleapis.com/maps/api
+    description: Google Map's API
 
 tags:
-  - name: "Root resource"
+  - name: "Google Map Root resource"
 
 paths:
   /:
     get:
       tags: 
-        - "Root resource"
+        - "Google Map Root resource"
       responses:
         200:
           content:
