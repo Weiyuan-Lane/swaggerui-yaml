@@ -14,9 +14,7 @@ The documentation can be viewed at `localhost:8080`
 
 ## Configuring the API documentation
 
-Amend `swagger-config.yaml` in the root directory of this project. No other changes are required.
-
-Do use a swagger editor like https://editor.swagger.io/ to test your changes 
+Amend `docs/*.yaml` from the root directory of this project. No other changes are required.
 
 ## Building and deploying for production use
 
